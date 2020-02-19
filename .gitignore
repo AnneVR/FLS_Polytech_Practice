@@ -1,0 +1,11 @@
+.settings
+.vscode
+
+.gradle
+build
+gradle
+
+.gitattributes
+
+gradlew
+gradlew.bat
