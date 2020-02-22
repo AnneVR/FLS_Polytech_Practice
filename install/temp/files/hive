@@ -1,0 +1,6 @@
+
+#HIVE
+
+export HIVE_HOME=/home/${USER}/hive/apache-hive-2.3.6-bin/
+export PATH=$PATH:$HIVE_HOME/bin
+
