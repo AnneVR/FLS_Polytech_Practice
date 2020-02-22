@@ -1,8 +1,6 @@
 # INSTALL
 
-Use intall folder
-
-	./install.sh
+	./install/install.sh
 	
 ## BUILD 
 
