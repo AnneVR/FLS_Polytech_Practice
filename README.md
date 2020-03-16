@@ -1,13 +1,3 @@
-# INSTALL
-
-	./install/install.sh
-	
-## BUILD 
-
-Build with
-		 
-	$ gradle clean build
-
 ## RUN 
 
 Before running make sure dfs and metastore are running.

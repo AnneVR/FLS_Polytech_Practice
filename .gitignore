@@ -5,6 +5,10 @@
 build
 gradle
 
+input
+
+.idea
+
 .gitattributes
 
 gradlew

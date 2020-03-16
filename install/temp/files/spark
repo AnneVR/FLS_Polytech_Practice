@@ -1,5 +1,0 @@
-
-#SPARK
-
-export SPARK_HOME=/home/${USER}/spark/spark-3.0.0-preview2-bin-hadoop2.7
-export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin

@@ -41,8 +41,6 @@ dependencies {
 	implementation("org.apache.spark:spark-sql_2.11:2.1.0")
 	implementation("org.apache.spark:spark-hive_2.11:2.1.0")
 
-    implementation("org.scala-lang:scala-xml:2.11.0-M4")
-
     // Use Scalatest for testing our library
     testImplementation("junit:junit:4.12")
     testImplementation("org.scalatest:scalatest_2.11:3.0.8")
