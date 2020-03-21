@@ -21,6 +21,9 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    @Column(name = "department_id", nullable = true)
+    long departmentId;
+
     @Column(name = "first_name", nullable = false)
     private String firstName;
 
@@ -102,6 +105,26 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    /**
+     * Gets department id
+     *
+     * @return id of department for this User
+     */
+    public long getDepartmentId() {
+        return departmentId;
+    }
+
+    /**
+     * Sets department id
+     *
+     * @param departmentId of this user
+     */
+    public void setDepartmentId(long departmentId) {
+        this.departmentId = departmentId;
+    }
+
+
 
     @Override
     public String toString() {
