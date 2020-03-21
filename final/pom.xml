@@ -10,8 +10,7 @@
 	</parent>
 	<groupId>com.backend</groupId>
 	<artifactId>final</artifactId>
-	<version>1.9.2-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>final</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -20,13 +19,6 @@
 	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>jdk.tools</groupId>
-			<artifactId>jdk.tools</artifactId>
-			<version>1.7.0_05</version>
-			<scope>system</scope>
-			<systemPath>/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/lib/tools.jar</systemPath>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
@@ -49,7 +41,7 @@
 			<artifactId>spring-data-hadoop</artifactId>
 			<version>2.5.0.RELEASE</version>
 		</dependency>
-
+		<!-- https://mvnrepository.com/artifact/org.apache.hive/hive-jdbc -->
 		<dependency>
 			<groupId>org.apache.hive</groupId>
 			<artifactId>hive-jdbc</artifactId>
@@ -73,22 +65,11 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
-			<version>5.4.2.Final</version>
-		</dependency>
 		<!-- PostgreSQL -->
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -98,25 +79,7 @@
 	</dependencies>
 
 	<build>
-		<defaultGoal>install</defaultGoal>
 		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<goals>
-							<goal>repackage</goal>
-						</goals>
-						<configuration>
-							<classifier>spring-boot</classifier>
-							<mainClass>
-								com.example.demo.FinalApplication
-							</mainClass>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -124,7 +87,7 @@
 			<plugin>
 				<groupId>com.github.eirslett</groupId>
 				<artifactId>frontend-maven-plugin</artifactId>
-				<version>1.9.1</version>
+				<version>1.6</version>
 				<configuration>
 					<installDirectory>target</installDirectory>
 				</configuration>
@@ -135,8 +98,8 @@
 							<goal>install-node-and-npm</goal>
 						</goals>
 						<configuration>
-							<nodeVersion>v12.16.0</nodeVersion>
-							<npmVersion>6.13.4</npmVersion>
+							<nodeVersion>v10.11.0</nodeVersion>
+							<npmVersion>6.4.1</npmVersion>
 						</configuration>
 					</execution>
 					<execution>
@@ -148,11 +111,16 @@
 							<arguments>install</arguments>
 						</configuration>
 					</execution>
+					<execution>
+						<id>webpack build</id>
+						<goals>
+							<goal>webpack</goal>
+						</goals>
+					</execution>
 				</executions>
 			</plugin>
 
 		</plugins>
-
 	</build>
 
 </project>
