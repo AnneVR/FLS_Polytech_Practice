@@ -1,0 +1,12 @@
+data
+.gradle
+.idea
+build
+gradle
+.gitattributes
+gradlew
+gradlew.bat
+submit_*
+derby.log
+metastore_db
+spark-warehouse
