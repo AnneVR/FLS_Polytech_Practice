@@ -3,13 +3,50 @@
  */
 package to_dl_mart
 
+import org.apache.spark.sql.{Row, SparkSession}
+import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructType}
 import org.scalatest.FunSuite
 import org.junit.runner.RunWith
 import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class AppSuite extends FunSuite {
-  test("someLibraryMethod is always true") {
 
+
+  val session = SparkSession.builder
+    .master("local")
+    .appName("to_dl_raw")
+    .enableHiveSupport()
+    .getOrCreate()
+
+
+  test("hive: create df") {
+    val someData = Seq(
+      Row(8, "bat"),
+      Row(64, "mouse"),
+      Row(-27, "horse")
+    )
+
+    val someSchema = List(
+      StructField("number", IntegerType, true),
+      StructField("word", StringType, true)
+    )
+
+    val someDF = session.createDataFrame(
+      session.sparkContext.parallelize(someData),
+      StructType(someSchema)
+    )
+
+    someDF.write.mode("Overwrite").saveAsTable("test_table")
+  }
+
+  test("hive: read table") {
+    assertResult(3) {
+      session.sql("select * from test_table").count()
+    }
+  }
+
+  test ("hive: drop table") {
+    session.sql("drop table test_table")
   }
 }
