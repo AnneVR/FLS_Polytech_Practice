@@ -3,7 +3,6 @@
  */
 package to_dl_raw
 
-import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.fs.{FileSystem, Path}
 import org.apache.spark.sql.{Row, SparkSession}
 import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructType}
@@ -51,11 +50,4 @@ class AppSuite extends FunSuite {
     test ("hive: drop table") {
       session.sql("drop table test_table")
     }
-
-//    test("hdfs: data is present") {
-//      val fs = FileSystem.get(session.sparkContext.hadoopConfiguration)
-//      assertResult(true) {
-//        fs.exists(new Path("hdfs://localhost:9000/sba/application_data.csv"))
-//      }
-//    }
 }
