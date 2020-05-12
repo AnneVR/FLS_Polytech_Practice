@@ -24,7 +24,13 @@ class WebClient {
               }
             : options;
 
-        let resp = await fetch(url, optionsWithToken);
+        let resp = await fetch(url, optionsWithToken).then((resp) => {
+            // TODO - check if works
+            if (resp.status == 402) {
+                // Очистить токен, перезагрузить страницу.
+            }
+            return resp;
+        });
         let val = await resp.json();
         if (resp.ok) {
             // TODO Handle map errors ?
