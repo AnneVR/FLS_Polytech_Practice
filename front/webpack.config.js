@@ -24,11 +24,8 @@ module.exports = {
         contentBase: path.join(__dirname, "dist"),
         compress: true,
         historyApiFallback: true,
-        port: 9500,
-        proxy: {
-            '/api': 'http://localhost:8088'
-        }
-    },
+        port: 9500
+   },
     plugins: [
         new HtmlWebpackPlugin({
             template: "./public/index.html"
