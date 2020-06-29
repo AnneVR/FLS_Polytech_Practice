@@ -1,15 +1,13 @@
 import * as React from "react";
 
-import { Switch, Route } from "react-router-dom";
-import { Login } from "./components/Login/Login";
-import { NavBar } from "./components/NavBar/NavBar";
+import { Switch } from "react-router-dom";
+import { HomePage } from "./components/HomePage/HomePage";
 
 export function Routes() {
     return (
         <>
-        <NavBar/>
         <Switch>
-            <Route exact path="/login" component={Login}/>
+            <HomePage />
         </Switch>
         </>
     )
