@@ -52,6 +52,9 @@ object App {
       "HOUR_APPR_PROCESS_START",
       "REG_REGION_NOT_LIVE_REGION",
       "REG_REGION_NOT_WORK_REGION"
-    ).write.mode("Overwrite").saveAsTable("dl_raw_filtered")
+    ).write
+      .option("timestampFormat", "yyyy/MM/dd HH:mm:ss ZZ")
+      .mode("Overwrite")
+      .saveAsTable("dl_raw_filtered")
   }
 }
