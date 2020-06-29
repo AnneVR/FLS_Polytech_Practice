@@ -14,7 +14,7 @@ object App {
     session.sparkContext.setLogLevel("Warn")
 
     val data = session.read.option("header", "true")
-                            .csv("hdfs://" + args(0) +  "/data/application_data.csv")
+                            .csv("hdfs://" + args(0) +  "/sba/application_data.csv")
 
     data.write.mode("Overwrite").saveAsTable("dl_raw_full")
 
