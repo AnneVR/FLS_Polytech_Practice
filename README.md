@@ -43,22 +43,22 @@ FLS Политех НИР + практика 2019-2020
 
 # МЕТРИКИ (ключ, значение) -> ключ из словаря (ключ, значение)
 
-"NAME_CONTRACT_TYPE"                сколько стоят в среднем товары которые для каждого типа
-"CODE_GENDER"                       процент добросовестности у трех самых популярных профессий у мужчин и у женщин
-"NAME_TYPE_SUITE"                   ----
-"NAME_INCOME_TYPE"                  процент добросовестности  у десяти самых распространенных
-"NAME_EDUCATION_TYPE"               процент добросовестности для каждого типа образование
-"NAME_FAMILY_STATUS"                ----
-"NAME_HOUSING_TYPE"                 процент добросовестности у трех самых популярных мест проживания
-"OCCUPATION_TYPE"                   процент добросовестности для первых 20 самых добросовестностных работ и для других
-"WEEKDAY_APPR_PROCESS_START"        график обмана по дням недели
+      "NAME_CONTRACT_TYPE"                сколько стоят в среднем товары которые для каждого типа
+      "CODE_GENDER"                       процент добросовестности у трех самых популярных профессий у мужчин и у женщин
+      "NAME_TYPE_SUITE"                   ----
+      "NAME_INCOME_TYPE"                  процент добросовестности  у десяти самых распространенных
+      "NAME_EDUCATION_TYPE"               процент добросовестности для каждого типа образование
+      "NAME_FAMILY_STATUS"                ----
+      "NAME_HOUSING_TYPE"                 процент добросовестности у трех самых популярных мест проживания
+      "OCCUPATION_TYPE"                   процент добросовестности для первых 20 самых добросовестностных работ и для других
+      "WEEKDAY_APPR_PROCESS_START"        график обмана по дням недели
 
 # Таблицы
 
-1: таблица dl_analytics_contract_type           словарь dl_dict_contract_type
-2: таблица dl_analytics_gender                  словарь dl_dict_gender
-3: таблица dl_analytics_income_type             словарь dl_dict_income_type
-4: таблица dl_analytics_education_type          словарь dl_dict_education_type
-5: таблица dl_analytics_housing_type            словарь dl_dict_housing_type
-6: таблица dl_analytics_occupation_type         словарь dl_dict_occupation_type
-7: таблица dl_analytics_day_of_week_applied     словарь dl_dict_day_of_week_applied
+      1: таблица dl_analytics_contract_type           словарь dl_dict_contract_type
+      2: таблица dl_analytics_gender                  словарь dl_dict_gender
+      3: таблица dl_analytics_income_type             словарь dl_dict_income_type
+      4: таблица dl_analytics_education_type          словарь dl_dict_education_type
+      5: таблица dl_analytics_housing_type            словарь dl_dict_housing_type
+      6: таблица dl_analytics_occupation_type         словарь dl_dict_occupation_type
+      7: таблица dl_analytics_day_of_week_applied     словарь dl_dict_day_of_week_applied
