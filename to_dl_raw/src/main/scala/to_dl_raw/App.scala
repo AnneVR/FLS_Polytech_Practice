@@ -17,7 +17,7 @@ object App {
                             .option("timestampFormat", "yyyy/MM/dd HH:mm:ss ZZ")
                             .csv("hdfs://" + args(0) +  "/sba/application_data.csv")
 
-    data.write.mode("Overwrite").saveAsTable("dl_raw_full")
+    data.write.option("timestampFormat", "yyyy/MM/dd HH:mm:ss ZZ").mode("Overwrite").saveAsTable("dl_raw_full")
 
     data.select(
       "SK_ID_CURR",
