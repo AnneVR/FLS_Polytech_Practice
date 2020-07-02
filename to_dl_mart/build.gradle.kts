@@ -23,16 +23,12 @@ repositories {
 dependencies {
 
     // Scala
-    implementation("org.scala-lang:scala-library:2.11.12")
-
-    // Use Scalatest
-    testImplementation("junit:junit:4.12")
-    testImplementation("org.scalatest:scalatest_2.11:3.0.8")
+    implementation("org.scala-lang:scala-library:2.12.10")
 
     // Spark hive
-    implementation("org.apache.spark:spark-core_2.11:2.1.0")
-    implementation("org.apache.spark:spark-sql_2.11:2.1.0")
-    implementation("org.apache.spark:spark-hive_2.11:2.1.0")
+    implementation("org.apache.spark:spark-core_2.12:3.0.0-preview")
+    implementation("org.apache.spark:spark-sql_2.12:3.0.0-preview")
+    implementation("org.apache.spark:spark-hive_2.12:3.0.0-preview")
 }
 
 
