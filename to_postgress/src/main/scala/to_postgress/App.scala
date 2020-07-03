@@ -23,6 +23,8 @@ object App {
 
     val connectionProperties = new Properties()
     connectionProperties.setProperty("driver", driver)
+    connectionProperties.setProperty("user", args(1))
+    connectionProperties.setProperty("password", args(2))
 
     val ContractTypeDict      = session.sql("select * from dl_dict_contract_type")
     val GenderDict            = session.sql("select * from dl_dict_gender")
