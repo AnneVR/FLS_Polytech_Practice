@@ -36,6 +36,11 @@ object App {
     val OccupationTypeDict    = session.sql("select * from dl_dict_occupation_type")
     val DayOfWeekAppliedDict  = session.sql("select * from dl_dict_day_of_week_applied")
 
+    System.out.println(conn_str);
+    System.out.println(args(1));
+    System.out.println(args(2));
+
+
     ContractTypeDict.write.mode("overwrite").option("createTableColumnTypes", "value VARCHAR (100), key INTEGER").jdbc(conn_str,"dict_contract_type",connectionProperties)
     GenderDict.write.mode("overwrite").option("createTableColumnTypes", "value VARCHAR (100), key INTEGER").jdbc(conn_str,"dict_gender",connectionProperties)
     AccompliceDict.write.mode("overwrite").option("createTableColumnTypes", "value VARCHAR (100), key INTEGER").jdbc(conn_str,"dict_accomplice",connectionProperties)
