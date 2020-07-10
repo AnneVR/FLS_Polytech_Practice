@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "dl_analytics_occupation_type")
-public class Occupation_type extends Analytics
+public class OccupationTypeAnalytics extends Analytics
 {
 
 }

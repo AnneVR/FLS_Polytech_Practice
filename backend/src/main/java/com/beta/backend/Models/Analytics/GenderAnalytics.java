@@ -3,8 +3,8 @@ package com.beta.backend.Models.Analytics;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "dl_analytics_income_type")
-public class Income_type extends Analytics
+@Table(name = "dl_analytics_gender")
+public class GenderAnalytics extends Analytics
 {
 
 }
