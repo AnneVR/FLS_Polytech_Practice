@@ -1,4 +1,4 @@
-package com.beta.backend.Models;
+package com.beta.backend.Models.Dicts;
 
 
 import javax.persistence.*;

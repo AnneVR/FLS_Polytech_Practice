@@ -1,7 +1,5 @@
 package com.beta.backend.Models.Dicts;
 
-import com.beta.backend.Models.AbstractDictTable;
-
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
