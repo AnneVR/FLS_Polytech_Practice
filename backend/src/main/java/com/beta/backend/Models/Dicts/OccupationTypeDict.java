@@ -4,6 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "dl_dict_housing_type")
-public class HousingType extends AbstractDictTable {
+@Table(name = "dl_dict_occupation_type")
+public class OccupationTypeDict extends AbstractDictTable {
 }

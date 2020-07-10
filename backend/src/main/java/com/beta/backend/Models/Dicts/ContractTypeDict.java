@@ -4,6 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "dl_dict_day_of_week_applied")
-public class DayOfWeekApplied extends AbstractDictTable {
+@Table(name = "dl_dict_contract_type")
+public class ContractTypeDict extends AbstractDictTable {
 }
