@@ -11,6 +11,7 @@
 	<groupId>com.beta</groupId>
 	<artifactId>backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+        <packaging>jar</packaging>
 	<name>backend</name>
 	<description>Beta backend</description>
 
@@ -81,7 +82,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<executable>true</executable>
+						<executable>true</executable>
 				</configuration>
 			</plugin>
 		</plugins>
