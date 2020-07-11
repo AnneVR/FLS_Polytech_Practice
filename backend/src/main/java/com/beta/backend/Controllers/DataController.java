@@ -62,6 +62,8 @@ public class DataController {
     @Autowired
     private OccupationTypeDictRepository occupationTypeDictRepository;
 
+
+
     @GetMapping("/data")
     public ResponseEntity<DataContainer> getData(@RequestParam(name = "type") String dataType){
 
@@ -100,12 +102,12 @@ public class DataController {
             default:
                 dataList = new ArrayList<Analytics>();
                 dictList = new ArrayList<AbstractDictTable>();
+
         }
 
         DataContainer response = new DataContainer(dataList, dictList);
         return ResponseEntity.ok().body(response);
     }
-
 
 
 }
