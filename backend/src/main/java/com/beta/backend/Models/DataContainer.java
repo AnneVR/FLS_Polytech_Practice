@@ -10,22 +10,27 @@ public class DataContainer {
      * Container to pack data from several repos and send to frontend
      */
 
-    private List<Analytics> data;
-    private List<AbstractDictTable> dict;
+    private List<? extends Analytics> data;
+    private List<? extends AbstractDictTable> dict;
 
-    public List<Analytics> getData() {
+    public DataContainer(List<? extends Analytics> analyticsData, List<? extends AbstractDictTable> dictData){
+        this.data = analyticsData;
+        this.dict = dictData;
+    }
+
+    public List<? extends Analytics> getData() {
         return data;
     }
 
-    public void setData(List<Analytics> data) {
+    public void setData(List<? extends Analytics> data) {
         this.data = data;
     }
 
-    public List<AbstractDictTable> getDict() {
+    public List<? extends AbstractDictTable> getDict() {
         return dict;
     }
 
-    public void setDict(List<AbstractDictTable> dict) {
+    public void setDict(List<? extends AbstractDictTable> dict) {
         this.dict = dict;
     }
 
